@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+#  security:
+#    user:
+#      name: admin
+#      password: admin
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterUnicoding=UTF8&useSSL=false
+    username: root
+    password: 123456
+
+location: E:\dpan\bugbuff\Change_Picture\upload
+
+mybatis:
+  type-aliases-package: com.RMS.Restaurant.entities
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mappers/*Mapper.xml
